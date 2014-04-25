@@ -48,7 +48,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 String stringUrl = mEditText.getText().toString();
                 if (isNetworkAvailable()) {
-                    new DownloadURL().execute(stringUrl);
+                    //new DownloadURL().execute(stringUrl);
+                    obtainValueForCity("lima");
                 } else{
                     System.out.println("No hay Conexion Disponible");
                 }
@@ -147,7 +148,10 @@ public class MainActivity extends Activity {
         }
     }
 
-
+    private void obtainValueForCity(String ciudad){
+        String url = "http://maps.google.com/maps/api/geocode/json?address="+ciudad+"&sensor=false";
+        new DownloadURL().execute(url);
+    }
 
 
 }

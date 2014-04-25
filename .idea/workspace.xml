@@ -26,15 +26,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8ee950-70b3-40a5-a041-9035ea508019" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/PryBroadcastreceiver/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/PryBroadcastreceiver/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PryBroadcastreceiver.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398386713170" ignored="false" />
     <file path="/Dummy.txt" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398450430218" ignored="false" />
     <file path="/main.xml" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398387986162" ignored="false" />
-    <file path="/MainActivity.java" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398466248261" ignored="false" />
+    <file path="/MainActivity.java" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398467583335" ignored="false" />
     <file path="/NetworkReceiver.java" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398389472681" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398389778750" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/example/PryBroadcastreceiver/BuildConfig.java" changelist="8b8ee950-70b3-40a5-a041-9035ea508019" time="1398389812554" ignored="false" />
@@ -123,9 +121,9 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/PryBroadcastreceiver/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="0" selection-start="4441" selection-end="5022" vertical-scroll-proportion="0.3030303">
+            <state line="150" column="0" selection-start="5074" selection-end="5272" vertical-scroll-proportion="0.4988662">
               <folding>
-                <element signature="e#4680#4695#0" expanded="true" />
+                <element signature="e#4730#4745#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,10 +164,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="505" />
-    <option name="y" value="9" />
+    <option name="x" value="335" />
+    <option name="y" value="29" />
     <option name="width" value="1339" />
-    <option name="height" value="742" />
+    <option name="height" value="622" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -417,7 +415,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="505" y="9" width="1339" height="742" extended-state="0" />
+    <frame x="335" y="29" width="1339" height="622" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -532,7 +530,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="26" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#4680#4695#0" expanded="true" />
+            <element signature="e#4730#4745#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,9 +568,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/PryBroadcastreceiver/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="4441" selection-end="5022" vertical-scroll-proportion="0.3030303">
+        <state line="150" column="0" selection-start="5074" selection-end="5272" vertical-scroll-proportion="0.4988662">
           <folding>
-            <element signature="e#4680#4695#0" expanded="true" />
+            <element signature="e#4730#4745#0" expanded="true" />
           </folding>
         </state>
       </provider>
