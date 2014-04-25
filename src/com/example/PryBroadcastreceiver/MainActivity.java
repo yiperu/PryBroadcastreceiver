@@ -7,6 +7,9 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,9 +20,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MainActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
+
+    EditText mEditText = null;
+    Button miButon = null;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,17 +32,24 @@ public class MainActivity extends Activity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        System.out.println("==================  INICIO  ==================");
-        try {
-            URL myurl = new URL("http://www.google.com");
-            HttpURLConnection con = (HttpURLConnection)myurl.openConnection();
-            readStream(con.getInputStream());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("================== FIN ======================");
+        mEditText = (EditText)findViewById(R.id.idEditTextUrl);
+        miButon = (Button)findViewById(R.id.idBtnSendUrl);
+
+        miButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String stringUrl = mEditText.getText().toString();
+                if (isNetworkAvailable()) {
+                    new DownloadURL().execute(stringUrl);
+                } else{
+                    System.out.println("No hay Conexion Disponible");
+                }
+
+            }
+        });
+
+
+
 
     }
 
@@ -87,7 +98,17 @@ public class MainActivity extends Activity {
     private class DownloadURL extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params) {
-            // TODO Auto-generated method stub
+            System.out.println("==================  INICIO  ==================");
+            try {
+                URL myurl = new URL(params[0]);
+                HttpURLConnection con = (HttpURLConnection)myurl.openConnection();
+                readStream(con.getInputStream());
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("================== FIN ======================");
             return null;
         }
         @Override
@@ -100,6 +121,6 @@ public class MainActivity extends Activity {
             // TODO Auto-generated method stub
             super.onPreExecute();
         }
-
+    }
 
 }

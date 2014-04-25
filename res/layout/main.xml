@@ -9,5 +9,21 @@
             android:layout_height="wrap_content"
             android:text="Hello World, MainActivity"
             />
+    <EditText
+            android:id="@+id/idEditTextUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+            android:id="@+id/idBtnSendUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir" />
+
 </LinearLayout>
 
