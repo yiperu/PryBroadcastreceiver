@@ -10,6 +10,12 @@ import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +24,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
@@ -122,5 +130,24 @@ public class MainActivity extends Activity {
             super.onPreExecute();
         }
     }
+
+    private void connectionWithHttpClient(){
+        HttpClient httpClient = new DefaultHttpClient();
+
+        HttpPost httpPost = new HttpPost("http://www.example.com/login");
+
+        List<NameValuePair> nameValuePairList = new ArrayList<NameValuePair>(2);
+        nameValuePairList.add(new BasicNameValuePair("email","yiperu@gmail.com"));
+        nameValuePairList.add(new BasicNameValuePair("password","123456"));
+
+        try {
+            HttpResponse response = httpClient.execute(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
 }
